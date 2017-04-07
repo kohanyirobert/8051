@@ -1,0 +1,90 @@
+= About
+
+Instructions to download programs to (some) https://en.wikipedia.org/wiki/Intel_MCS-51[Intel MCS-51] compatible MCUs.
+
+== Assembly
+
+=== AT89S51
+
+NOTE::
+Same applies to AT89S52.
+
+image::./fzz/at89s51_bb.png[A89S51]
+
+=== STC89C51RC
+
+NOTE::
+Same applies to STC89C52RC and STC12C5A6S2.
+
+image::./fzz/stc89c51rc_bb.png[STC89C51RC]
+
+== Dependencies
+
+=== Hardware
+
+==== AT89S51, AT89S52
+
+* https://www.arduino.cc/en/Main/Products[Arduino board] (e.g. Nano, Micro, etc.) -- 1 piece
+* Microcontroller -- 1 piece
+* Breadboard -- 2 pieces
+* Jumper wires -- ~20 pieces
+* LEDs -- 1 red, 1 green, 1 yellow, 1 white
+* 1-10kΩ resistors -- 2 pieces
+* 8-33MHz oscillator crystal -- 1 piece
+* 22μF capacitors -- 2 pieces
+* 10-pin ribbon cable -- 1 piece
+* 10-pin to 6-pin adapter -- 2 pieces
+* Tactile switch -- 1 piece
+
+==== STC89C51RC, STC89C52RC, STC12C5A60S2
+
+* https://www.google.com/search?q=USB+to+TTL[USB to Serial/TTL adapter] (e.g. CH340G, PL2303, etc.) -- 1 piece
+* Microcontroller -- 1 piece
+* Breadboard -- 1 piece
+* Jumper wires -- ~10 pieces
+* LEDs -- 1 white
+* 1-10kΩ resistors -- 1 pieces
+* 8-33MHz oscillator crystal -- 1 piece
+* 22μF capacitors -- 2 pieces
+* Tactile switch -- 1 piece
+
+=== Software
+
+==== AT89S51, AT89S52
+
+* http://sdcc.sourceforge.net/[`sdcc`]
+* https://www.arduino.cc[Arduino IDE]
+* http://www.nongnu.org/avrdude/[`avrdude`] -- (the Arduino IDE distribution contains a recent binary)
+
+.IMPORTANT
+Upload the ArduinoISP sketch onto the Arduino board.
+
+==== STC89C51RC, STC89C52RC, STC12C5A60S2
+
+* http://sdcc.sourceforge.net/[`sdcc`]
+* https://github.com/grigorig/stcgal[`stcgal`]
+
+== Programming
+
+=== Compile binary
+
+.Windows and Unix
+----
+sdcc -o ./out/ main.c
+----
+
+=== Downloading
+
+==== AT89S51, AT89S52
+
+.Windows
+----
+avrdude -C %AVRDUDE_HOME%/etc/avrdude.conf -C +./etc/avrdude-new.conf -c avrisp -p AT89S51 -P COM7 -b 19200 -U flash:w:./out/main.ihx:i
+----
+
+==== STC89C51RC, STC89C52RC, STC12C5A60S2
+
+.Windows
+----
+stcgal -p COM7 ./out/main.ihx
+----
