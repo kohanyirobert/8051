@@ -31,7 +31,7 @@ image::./fzz/stc89c51rc_bb.png[STC89C51RC]
 * LEDs -- 1 red, 1 green, 1 yellow, 1 white
 * 1-10kΩ resistors -- 2 pieces
 * 8-33MHz oscillator crystal -- 1 piece
-* 22μF capacitors -- 2 pieces
+* 22pF capacitors -- 2 pieces
 * 10-pin ribbon cable -- 1 piece
 * 10-pin to 6-pin adapter -- 2 pieces
 * Tactile switch -- 1 piece
@@ -45,7 +45,7 @@ image::./fzz/stc89c51rc_bb.png[STC89C51RC]
 * LEDs -- 1 white
 * 1-10kΩ resistors -- 1 pieces
 * 8-33MHz oscillator crystal -- 1 piece
-* 22μF capacitors -- 2 pieces
+* 22pF capacitors -- 2 pieces
 * Tactile switch -- 1 piece
 
 === Software
