@@ -30,7 +30,7 @@ image::./fzz/stc89c51rc_bb.png[STC89C51RC]
 * Jumper wires -- ~20 pieces
 * LEDs -- 1 red, 1 green, 1 yellow, 1 white
 * 1-10kΩ resistors -- 2 pieces
-* 8-33MHz oscillator crystal -- 1 piece
+* 8-33MHz quartz crystal -- 1 piece
 * 22pF capacitors -- 2 pieces
 * 10-pin ribbon cable -- 1 piece
 * 10-pin to 6-pin adapter -- 2 pieces
@@ -44,7 +44,7 @@ image::./fzz/stc89c51rc_bb.png[STC89C51RC]
 * Jumper wires -- ~10 pieces
 * LEDs -- 1 white
 * 1-10kΩ resistors -- 1 pieces
-* 8-33MHz oscillator crystal -- 1 piece
+* 8-33MHz quartz crystal -- 1 piece
 * 22pF capacitors -- 2 pieces
 * Push-button (NO) -- 1 piece
 
