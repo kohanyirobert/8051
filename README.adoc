@@ -53,8 +53,8 @@ image::./fzz/stc89c51rc_bb.png[STC89C51RC]
 ==== AT89S51, AT89S52
 
 * http://www.moravia-microsystems.com/mcu-8051-ide/[MCU 8051 IDE]
-* https://www.arduino.cc[Arduino IDE]
-* http://www.nongnu.org/avrdude/[`avrdude`] -- (the Arduino IDE distribution contains a recent binary)
+* https://www.arduino.cc[Arduino IDE] -- 1.8.x or above should work
+* http://www.nongnu.org/avrdude/[`avrdude`] -- the Arduino IDE distribution contains a recent binary
 
 .IMPORTANT
 Upload the ArduinoISP sketch onto the Arduino board.
