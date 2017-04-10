@@ -52,7 +52,7 @@ image::./fzz/stc89c51rc_bb.png[STC89C51RC]
 
 ==== AT89S51, AT89S52
 
-* http://sdcc.sourceforge.net/[`sdcc`]
+* http://www.moravia-microsystems.com/mcu-8051-ide/[MCU 8051 IDE]
 * https://www.arduino.cc[Arduino IDE]
 * http://www.nongnu.org/avrdude/[`avrdude`] -- (the Arduino IDE distribution contains a recent binary)
 
@@ -61,7 +61,7 @@ Upload the ArduinoISP sketch onto the Arduino board.
 
 ==== STC89C51RC, STC89C52RC, STC12C5A60S2
 
-* http://sdcc.sourceforge.net/[`sdcc`]
+* http://www.moravia-microsystems.com/mcu-8051-ide/[MCU 8051 IDE]
 * https://github.com/grigorig/stcgal[`stcgal`]
 
 == Programming
@@ -70,8 +70,10 @@ Upload the ArduinoISP sketch onto the Arduino board.
 
 .Windows and Unix
 ----
-sdcc -o ./out/ main.c
+mcu8051ide --no-bin --no-sim --assemble main.asm
 ----
+
+The output is _main.hex_.
 
 === Downloading
 
@@ -79,12 +81,14 @@ sdcc -o ./out/ main.c
 
 .Windows
 ----
-avrdude -C %AVRDUDE_HOME%/etc/avrdude.conf -C +./etc/avrdude-new.conf -c avrisp -p AT89S51 -P COM7 -b 19200 -U flash:w:./out/main.ihx:i
+avrdude -C %AVRDUDE_HOME%/etc/avrdude.conf -C +./etc/avrdude-new.conf -c avrisp -p AT89S51 -P COM7 -b 19200 -U flash:w:main.hex:i
 ----
 
 ==== STC89C51RC, STC89C52RC, STC12C5A60S2
 
 .Windows
 ----
-stcgal -p COM7 ./out/main.ihx
+stcgal -p COM7 main.hex // <1>
 ----
+<1> Executing this displays _Waiting for MCU, please cycle power_.
+Simply disconnect then reconnect VCC.
