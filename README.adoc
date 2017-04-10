@@ -1,8 +1,4 @@
 :icons: font
-ifdef::env-github[]
-:note-caption: :information:
-:important-caption: :exclamation:
-endif::[]
 
 = About
 
