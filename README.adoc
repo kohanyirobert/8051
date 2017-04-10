@@ -1,22 +1,24 @@
 :icons: font
+ifdef::env-github[]
+:note-caption: :information:
+:important-caption: :exclamation:
+endif::[]
 
 = About
 
 Instructions to download programs to (some) https://en.wikipedia.org/wiki/Intel_MCS-51[Intel MCS-51] compatible MCUs.
 
-== Assembly
+== Parts
 
 === AT89S51
 
-NOTE::
-Same applies to AT89S52.
+NOTE: Same applies to AT89S52.
 
 image::./fzz/at89s51_bb.png[A89S51]
 
 === STC89C51RC
 
-NOTE::
-Same applies to STC89C52RC and STC12C5A6S2.
+NOTE: Same applies to STC89C52RC and STC12C5A6S2.
 
 image::./fzz/stc89c51rc_bb.png[STC89C51RC]
 
